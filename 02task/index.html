@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+<!--  <header class="header">-->
+<!--    <div class="container header-container">-->
+<!--      <div class="logo-block">-->
+<!--        <a href="#" class="logo">-->
+<!--          <img src="images/logo.svg" alt="Sportova спортивные комплексы">-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <a href="#" class="cart">-->
+<!--        <b>Корзина</b> (0)-->
+<!--        <span>Нет товаров</span>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </header>-->
+<!--<div class="catalog container">-->
+<!--  <aside class="main-nav">-->
+<!--    <ul>-->
+<!--      <li><a href="#">Каталог товаров</a></li>-->
+<!--      <li><a href="#">Доставка и оплата</a></li>-->
+<!--      <li><a href="#">Отзывы</a></li>-->
+<!--      <li><a href="#">Контакты</a></li>-->
+<!--      <li><a href="#">% Товары со скидкой</a></li>-->
+<!--    </ul>-->
+<!--  </aside>-->
+<!--  <div class="content">-->
+<!--    <h2 class="catalog-title">Каталог товаров</h2>-->
+<!--    <div class="cards">-->
+<!--      <a href="#" class="card-link swedish-walls">Щведские стенки</a>-->
+<!--      <a href="#" class="card-link horizontal-bars">Турники</a>-->
+<!--      <a href="#" class="card-link street-complexes">Уличные комплексы</a>-->
+<!--      <a href="#" class="card-link weightlifting">Тяжелая атлетика</a>-->
+<!--    </div>-->
+<!--    <div class="cards">-->
+<!--      <a href="#" class="card-link barbell-racks">Стойки под штангу</a>-->
+<!--      <a href="#" class="card-link martial-arts">Единоборства</a>-->
+<!--      <a href="#" class="card-link fitness">Фитнес</a>-->
+<!--      <a href="#" class="card-link entire-catalog">Весь каталог</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--    <div class="delivery-payment-block">-->
+<!--      <div class="block-inner">-->
+<!--        <h5 class="title-block">Доставка</h5>-->
+<!--        <p class="text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в-->
+<!--          постели превратился в страшное насекомое.</p>-->
+<!--        <p class="text">Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,-->
+<!--          выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот-->
+<!--          окончательно сползти одеяло.</p>-->
+<!--        <a href="#">Детальное описание</a>-->
+<!--      </div>-->
+<!--      <div class="block-inner">-->
+<!--        <h5 class="title-block">Оплата</h5>-->
+<!--        <p class="text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в-->
+<!--          постели превратился в страшное насекомое.</p>-->
+<!--        <p class="text">Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,-->
+<!--          выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот-->
+<!--          окончательно сползти одеяло.</p>-->
+<!--        <a href="#">Детальное описание</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  <footer class="footer">-->
+<!--    <div class="container footer-container">-->
+<!--      <a href="" class="footer-logo">-->
+<!--        <img src="images/footer_logo.png" alt="Sportova спортивные комплексы">-->
+<!--      </a>-->
+<!--      <span class="copyright">© ООО «Спортова», 2021</span>-->
+<!--    </div>-->
+<!--  </footer>-->
+<script type="text/babel">
+  const Header = ({logo, cart, quantity}) => {
+    return (
+            <header className="header">
+              <div className="container header-container">
+                <div className="logo-block">
+                  <a href="#" className="logo">
+                    <img src={logo} alt="Sportova спортивные комплексы"/>
+                  </a>
+                </div>
+                <a href="#" className="cart">
+                  <b>{cart}</b> (0)
+                  <span>{quantity}</span>
+                </a>
+              </div>
+            </header>
+    );
+  };
+  const contentOfHeader = (
+          <div>
+            <Header logo = "images/logo.svg" cart="корзина" quantity="нет товаров"/>
+          </div>
+  );
+  ReactDOM.render(contentOfHeader,document.getElementById('root'));
+</script>
+</body>
+
+</html>
