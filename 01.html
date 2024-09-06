@@ -17,9 +17,9 @@
     const Film = ({name, year, picture}) => {
         return (
             <div className="film">
-                <img width="200" src={picture} alt={name}/>
-                <h1>{name}</h1>
-                <p>Year of release: {year}</p>
+                <img width="250" src={picture} alt={name}/>
+                <h1 className="name">{name}</h1>
+                <p className="year">Year of release: {year}</p>
             </div>
         );
     };
