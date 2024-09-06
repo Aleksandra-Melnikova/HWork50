@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+    const Film = ({name, year, picture}) => {
+        return (
+            <div className="film">
+                <img width="200" src={picture} alt={name}/>
+                <h1>{name}</h1>
+                <p>Year of release: {year}</p>
+            </div>
+        );
+    };
+    const content = (
+        <div>
+            <Film name = "Titanic" year={1997} picture="https://avatars.dzeninfra.ru/get-zen_doc/5231833/pub_63809a5efe8f135536a40ff1_63809f83d4ffc44ed6ef8f20/scale_1200"/>
+            <Film name = "Inception" year={2010} picture="https://i.ytimg.com/vi/bNLHFs06p20/maxresdefault.jpg"/>
+            <Film name = "Lord of the Wind" year={2023} picture="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_654bbcd6b63ac8566a585661_654bbeda6e108c2ccabe46fa/lazy_smart_crop_1280x720"/>
+        </div>
+    );
+    ReactDOM.render(content,document.getElementById('app'));
+</script>
+</body>
+</html>
