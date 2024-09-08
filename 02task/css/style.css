@@ -45,45 +45,6 @@ body {
   text-decoration: none;
 }
 
-.nav-toggler {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: 1px solid #dedfe7;
-  background: url(../images/ic-burger.svg) center no-repeat;
-  display: none;
-  cursor: pointer;
-}
-
-.contact {
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: #6e7284;
-  padding-left: 66px;
-  position: relative;
-  padding-bottom: 2px;
-  margin-left: 8px;
-}
-
-.contact::before {
-  content: "";
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  border: 1px solid #dedfe7;
-  background: url(../images/ic-message.svg) center no-repeat;
-  position: absolute;
-  left: 0;
-  top: 3px;
-}
-
-.phone {
-  font-weight: 500;
-  font-size: 25px;
-  display: block;
-  color: #36383f;
-}
-
 .cart {
   font-size: 13px;
   letter-spacing: 0.02em;
@@ -105,10 +66,12 @@ body {
   color: #a3a6b2;
   display: block;
 }
+
 .catalog{
   display: grid;
   grid-template-columns: 230px 1fr;
 }
+
 .main-nav {
   background: #0a4ecb;
   margin-bottom: 10px;
@@ -158,7 +121,7 @@ body {
 
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -166,7 +129,7 @@ body {
 .card-link {
   text-decoration: none;
   display: block;
-  flex-basis: 24%;
+  flex-basis: 200px;
   background: #fff;
   border-radius: 12px;
   font-weight: 600;
@@ -201,62 +164,6 @@ body {
 
 .swedish-walls:hover::before {
   background: url(../images/icons-group.png) left -268px top -142px no-repeat;
-}
-
-.horizontal-bars::before {
-  background: url(../images/icons-group.png) left top no-repeat;
-}
-
-.horizontal-bars:hover::before {
-  background: url(../images/icons-group.png) left top -142px no-repeat;
-}
-
-.street-complexes::before {
-  background: url(../images/icons-group.png)right top no-repeat;
-}
-
-.street-complexes:hover::before {
-  background: url(../images/icons-group.png)right top -142px no-repeat;
-}
-
-.weightlifting::before {
-  background: url(../images/icons-group.png)left -134px top no-repeat;
-}
-
-.weightlifting:hover::before {
-  background: url(../images/icons-group.png)left -134px top -142px no-repeat;
-}
-
-.barbell-racks::before {
-  background: url(../images/icons-group.png)left bottom -114px no-repeat;
-}
-
-.barbell-racks:hover::before {
-  background: url(../images/icons-group.png)left bottom no-repeat;
-}
-
-.martial-arts::before {
-  background: url(../images/icons-group.png)left -134px bottom -114px no-repeat;
-}
-
-.martial-arts:hover::before {
-  background: url(../images/icons-group.png)left -134px bottom no-repeat;
-}
-
-.fitness::before {
-  background: url(../images/icons-group.png)left -258px bottom -114px no-repeat;
-}
-
-.fitness:hover::before {
-  background: url(../images/icons-group.png)left -258px bottom no-repeat;
-}
-
-.entire-catalog::before {
-  background: url(../images/icons-group.png)right bottom -114px no-repeat;
-}
-
-.entire-catalog:hover::before {
-  background: url(../images/icons-group.png)right bottom no-repeat;
 }
 
 .delivery-payment-block {
