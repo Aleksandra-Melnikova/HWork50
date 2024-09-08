@@ -181,6 +181,19 @@
           </div>
 
   );
+  const Footer= ({img, copyright}) => {
+    return (
+            <footer className="footer">-->
+                  <div className="container footer-container">
+                    <a href="#" className="footer-logo">
+                      <img src={img} alt="Sportova спортивные комплексы"/>
+                    </a>
+                  <span className="copyright">{copyright}</span>
+                </div>
+      </footer>
+    );
+  };
+
 
 
   ReactDOM.render(DeliveryAndPaymentBlock, document.getElementById('root'));
