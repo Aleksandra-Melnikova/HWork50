@@ -16,73 +16,6 @@
 
 <body>
 <div id="root"></div>
-<!--  <header class="header">-->
-<!--    <div class="container header-container">-->
-<!--      <div class="logo-block">-->
-<!--        <a href="#" class="logo">-->
-<!--          <img src="images/logo.svg" alt="Sportova спортивные комплексы">-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <a href="#" class="cart">-->
-<!--        <b>Корзина</b> (0)-->
-<!--        <span>Нет товаров</span>-->
-<!--      </a>-->
-<!--    </div>-->
-<!--  </header>-->
-<!--<div class="catalog container">-->
-<!--  <aside class="main-nav">-->
-<!--    <ul>-->
-<!--      <li><a href="#">Каталог товаров</a></li>-->
-<!--      <li><a href="#">Доставка и оплата</a></li>-->
-<!--      <li><a href="#">Отзывы</a></li>-->
-<!--      <li><a href="#">Контакты</a></li>-->
-<!--      <li><a href="#">% Товары со скидкой</a></li>-->
-<!--    </ul>-->
-<!--  </aside>-->
-<!--  <div class="content">-->
-<!--    <h2 class="catalog-title">Каталог товаров</h2>-->
-<!--    <div class="cards">-->
-<!--      <a href="#" class="card-link swedish-walls">Щведские стенки</a>-->
-<!--      <a href="#" class="card-link horizontal-bars">Турники</a>-->
-<!--      <a href="#" class="card-link street-complexes">Уличные комплексы</a>-->
-<!--      <a href="#" class="card-link weightlifting">Тяжелая атлетика</a>-->
-<!--    </div>-->
-<!--    <div class="cards">-->
-<!--      <a href="#" class="card-link barbell-racks">Стойки под штангу</a>-->
-<!--      <a href="#" class="card-link martial-arts">Единоборства</a>-->
-<!--      <a href="#" class="card-link fitness">Фитнес</a>-->
-<!--      <a href="#" class="card-link entire-catalog">Весь каталог</a>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--    <div class="delivery-payment-block">-->
-<!--      <div class="block-inner">-->
-<!--        <h5 class="title-block">Доставка</h5>-->
-<!--        <p class="text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в-->
-<!--          постели превратился в страшное насекомое.</p>-->
-<!--        <p class="text">Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,-->
-<!--          выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот-->
-<!--          окончательно сползти одеяло.</p>-->
-<!--        <a href="#">Детальное описание</a>-->
-<!--      </div>-->
-<!--      <div class="block-inner">-->
-<!--        <h5 class="title-block">Оплата</h5>-->
-<!--        <p class="text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в-->
-<!--          постели превратился в страшное насекомое.</p>-->
-<!--        <p class="text">Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,-->
-<!--          выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот-->
-<!--          окончательно сползти одеяло.</p>-->
-<!--        <a href="#">Детальное описание</a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  <footer class="footer">-->
-<!--    <div class="container footer-container">-->
-<!--      <a href="" class="footer-logo">-->
-<!--        <img src="images/footer_logo.png" alt="Sportova спортивные комплексы">-->
-<!--      </a>-->
-<!--      <span class="copyright">© ООО «Спортова», 2021</span>-->
-<!--    </div>-->
-<!--  </footer>-->
 <script type="text/babel">
   const Header = ({logo, cart, quantity}) => {
     return (
@@ -101,12 +34,14 @@
             </header>
     );
   };
-  const contentOfHeader = (
-          <div>
-            <Header logo = "images/logo.svg" cart="корзина" quantity="нет товаров"/>
-          </div>
-  );
-  ReactDOM.render(contentOfHeader,document.getElementById('root'));
+
+  const ContentOfHeader = () => {
+    return (
+            <div>
+              <Header logo="images/logo.svg" cart="корзина" quantity="нет товаров"/>
+            </div>
+    );
+  };
 
   const NavItem = ({link}) => {
     return (
@@ -117,17 +52,17 @@
   const Aside = () => {
     return (
             <aside className="main-nav">
-                  <ul>
-                    <NavItem link="Каталог товаров"/>
-                    <NavItem link="Доставка и оплата"/>
-                    <NavItem link="Отзывы"/>
-                    <NavItem link="Контакты"/>
-                    <NavItem link="% Товары со скидкой"/>
-                  </ul>
+              <ul>
+                <NavItem link="Каталог товаров"/>
+                <NavItem link="Доставка и оплата"/>
+                <NavItem link="Отзывы"/>
+                <NavItem link="Контакты"/>
+                <NavItem link="% Товары со скидкой"/>
+              </ul>
             </aside>
     );
   };
-  const Card= ({nameCard}) => {
+  const Card = ({nameCard}) => {
     return (
             <a href="#" className="card-link swedish-walls">{nameCard}</a>
     );
@@ -147,18 +82,19 @@
             </div>
     );
   };
-  const contentOfMain = (
+  const ContentOfMain = () => {
+    return (
           <div className="catalog container">
             <Aside/>
-          <div className="content">
-             <h2 className="catalog-title">Каталог товаров</h2>
-            <Cards/>
-           </div>
-  </div>
-  );
-  ReactDOM.render(contentOfMain,document.getElementById('root'));
+            <div className="content">
+              <h2 className="catalog-title">Каталог товаров</h2>
+              <Cards/>
+            </div>
+          </div>
+    );
+  };
 
-  const DeliveryAndPaymentItem= ({title, text1, text2, link}) => {
+  const DeliveryAndPaymentItem = ({title, text1, text2, link}) => {
     return (
             <div className="block-inner">
               <h5 className="title-block">{title}</h5>
@@ -168,35 +104,44 @@
             </div>
     );
   };
-  const DeliveryAndPaymentBlock = (
+  const DeliveryAndPaymentBlock =  () => {
+    return (
           <div className="delivery-payment-block">
             < DeliveryAndPaymentItem title="Доставка"
                                      text1="Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое."
                                      text2="Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло."
                                      link="Детальное описание"/>
             < DeliveryAndPaymentItem title="Оплата"
-                                       text1="Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое."
-                                       text2="Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло."
-                                       link="Детальное описание"/>
+                                     text1="Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое."
+                                     text2="Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый,выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло."
+                                     link="Детальное описание"/>
           </div>
 
-  );
-  const Footer= ({img, copyright}) => {
-    return (
-            <footer className="footer">-->
-                  <div className="container footer-container">
-                    <a href="#" className="footer-logo">
-                      <img src={img} alt="Sportova спортивные комплексы"/>
-                    </a>
-                  <span className="copyright">{copyright}</span>
-                </div>
-      </footer>
     );
   };
 
+  const Footer = ({img, copyright}) => {
+    return (
+            <footer className="footer">
+              <div className="container footer-container">
+                <a href="#" className="footer-logo">
+                  <img src={img} alt="Sportova спортивные комплексы"/>
+                </a>
+                <span className="copyright">{copyright}</span>
+              </div>
+            </footer>
+    );
+  };
+  const AllPage = (
+          <div>
+            <ContentOfHeader/>
+            <ContentOfMain/>
+            <DeliveryAndPaymentBlock/>
+            <Footer/>
+          </div>
+          );
 
-
-  ReactDOM.render(DeliveryAndPaymentBlock, document.getElementById('root'));
+  ReactDOM.render(AllPage, document.getElementById('root'));
 
 
 </script>
