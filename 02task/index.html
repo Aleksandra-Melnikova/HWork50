@@ -107,6 +107,73 @@
           </div>
   );
   ReactDOM.render(contentOfHeader,document.getElementById('root'));
+
+  const NavItem = ({link}) => {
+    return (
+            <li><a href="#">{link}</a></li>
+    );
+  };
+
+  const Aside = () => {
+    return (
+            <aside className="main-nav">
+                  <ul>
+                    <NavItem link="Каталог товаров"/>
+                    <NavItem link="Доставка и оплата"/>
+                    <NavItem link="Отзывы"/>
+                    <NavItem link="Контакты"/>
+                    <NavItem link="% Товары со скидкой"/>
+                  </ul>
+            </aside>
+    );
+  };
+  const Card= ({nameCard}) => {
+    return (
+            <a href="#" className="card-link swedish-walls">{nameCard}</a>
+    );
+  };
+
+  const Cards = () => {
+    return (
+            <div className="cards">
+              <Card nameCard="Щведские стенки"/>
+              <Card nameCard="Турники"/>
+              <Card nameCard="Уличные комплексы"/>
+              <Card nameCard="Тяжелая атлетика"/>
+              <Card nameCard="Стойки под штангу"/>
+              <Card nameCard="Единоборства"/>
+              <Card nameCard="Фитнес"/>
+              <Card nameCard="Весь каталоу"/>
+            </div>
+    );
+  };
+  const contentOfMain = (
+          <div className="catalog container">
+            <Aside/>
+          <div className="content">
+             <h2 className="catalog-title">Каталог товаров</h2>
+            <Cards/>
+           </div>
+  </div>
+  );
+  ReactDOM.render(contentOfHeader,document.getElementById('root'));
+
+
+  // const Aside = () => {
+  //   return (
+  //           <aside className="main-nav">
+  //             <ul>
+  //               <NavItem link="Каталог товаров"/>
+  //               <NavItem link="Доставка и оплата"/>
+  //               <NavItem link="Отзывы"/>
+  //               <NavItem link="Контакты"/>
+  //               <NavItem link="% Товары со скидкой"/>
+  //             </ul>
+  //           </aside>
+  //   );
+  // };
+
+
 </script>
 </body>
 
